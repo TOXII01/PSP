@@ -14,15 +14,13 @@
     - Etnia...  
     
    Las características que tenemos es lo que en Java se llamaría ATRIBUTO.  
-   
    Y ahora, ¿Qué hacen las personas?  
     -Comer  
     -Dormir  
     -Andar...  
     Estos comportamientos es lo que en Java se llamarían métodos.  
-    Ya esta, con esto podemos construir una clase.  
-    
-    ```java
+    Ya esta, con esto podemos construir una clase. 
+    ```Java
     public class Persona() {
         //ATRIBUTOS
       private double peso;
