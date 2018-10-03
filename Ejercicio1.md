@@ -21,7 +21,7 @@
     -Andar...  
     Estos comportamientos es lo que en Java se llamarían métodos.  
     Ya esta, con esto podemos construir una clase.  
-    ```java
+    ```Java  
     public class Persona() {  
         //ATRIBUTOS  
       private double peso;  
