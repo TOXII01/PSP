@@ -7,9 +7,9 @@
    Cuando hablamos de una clase hablamos básicamente de una unidad donde se guardan unos datos y unas operaciones, es una plantilla   donde vamos definiendo la forma que va a tomar un objeto, como va a ser y que operaciones puede realizar.  
    Podemos tomar un ejemplo básico como la clase Persona :   
    ¿Cuales son las caracterísitas que pueden definir a las personas?  
-    - Peso  
-    - Altura   
-    - Etnia...  
+    - Nombre  
+    - Edad   
+    - DNI...  
     
    Las características que tenemos es lo que en Java se llamaría ATRIBUTO.  
    Y ahora, ¿Qué hacen las personas?  
@@ -23,9 +23,10 @@
     
     public class Persona() {
         //ATRIBUTOS
+      private String dni;
       private String nombre;
       private int edad;
-      private String dni;
+      
         //METODOS
       public void comer() {}
       public void dormir() {}
@@ -42,7 +43,7 @@
     //TENEMOS LA CLASE 
     public class Persona() {}
     //Y TENEMOS EL OBJETO
-    Persona p = new Persona("Toxii01",20,"12341234F");
+    Persona p = new Persona("12341234F","Toxii01",20);
 ```
   
    Sobrecarga de métodos
