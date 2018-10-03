@@ -52,6 +52,7 @@
    Encapsulación
    ------
    La encapsulación es la ocultación de información al usuario, es decir, la información no necesaria, solo lo que se haya programado que sea útil para el usuario se mostrará, el funcionamiento interno se oculta ya que no es necesario que el usuario vea como son los procesos internos para cualquier acción que se haga en el programa. Por ello existen 3 niveles de visibilidad **Public**, que indica que se puede usar desde cualquier clase, **Protected** solo se puede usar en el mismo paquete, y **Private**, que sólo sirve para la misma clase.
+   
    Sobrecarga de métodos
    ------
    
