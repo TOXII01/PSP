@@ -17,7 +17,7 @@
     -Dormir  
     -Andar...  
     Estos comportamientos es lo que en Java se llamarían métodos.  
-    Ya esta, con esto podemos construir una clase.
+    Ya está, con esto podemos construir una clase.
    
    ```java
     
@@ -37,7 +37,7 @@
    Objeto
    ------
   
-  Cuando hablamos de **Objeto** nos referimos a la instancia de una **clase**, es decir, un objeto es  de un elemento que esta basado en la clase,que es una plantilla, a la que hace referencia. Los objetos tienen identidad, lo que les distingue de otros objetos de la misma clase(del mismo tipo), un comportamiento(los métodos que pueden hacer) y un estado(los atributos que tienen). 
+  Cuando hablamos de **Objeto** nos referimos a la instancia de una **clase**, es decir, un objeto es de un elemento que esta basado en la clase,que es una plantilla, a la que hace referencia. Los objetos tienen identidad, lo que les distingue de otros objetos de la misma clase(del mismo tipo), un comportamiento(los métodos que pueden hacer) y un estado(los atributos que tienen). 
   Vamos con un ejemplo siguiendo el anterior :  
 ```java
     //TENEMOS LA CLASE 
@@ -52,7 +52,7 @@
    Encapsulación
    ------
    La encapsulación es la ocultación de información al usuario, es decir, la información no necesaria, solo lo que se haya programado que sea útil para el usuario se mostrará, el funcionamiento interno se oculta ya que no es necesario que el usuario vea como son los procesos internos para cualquier acción que se haga en el programa. Por ello existen 3 niveles de visibilidad **Public**, que indica que se puede usar desde cualquier clase, **Protected** solo se puede usar en el mismo paquete, y **Private**, que sólo sirve para la misma clase.
-    Por ejemplo podemos crear una un programa de gestión de empleados, cada empleado tiene su función en la empresa, si queremos pedir datos del empleado, como la función que realizan, el programa nos la mostrará pero las llamadas internas que tiene que hacer no las muestra, desde que se introduce la orden hasta que llega a la clase empleado, al atributo concreto.
+    Por ejemplo podemos crear  un programa de gestión de empleados, cada empleado tiene su función en la empresa, si queremos pedir datos del empleado, como la función que realizan, el programa nos la mostrará pero las llamadas internas que tiene que hacer no las muestra, desde que se introduce la orden hasta que llega a la clase empleado, al atributo concreto.
    
    Sobrecarga de métodos
    ------
