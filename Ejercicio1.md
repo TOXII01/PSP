@@ -29,9 +29,9 @@
       private double altura;
       private String etnia;
         //METODOS
-      public static void comer() {}
-      public static void dormir() {}
-      public static void andar() {}
+      public void comer() {}
+      public void dormir() {}
+      public void andar() {}
       }
       ```
        
