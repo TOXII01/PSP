@@ -19,17 +19,19 @@
     -Dormir  
     -Andar...  
     Estos comportamientos es lo que en Java se llamarían métodos.  
-    Ya esta, con esto podemos construir una clase. 
-    ```Java
+    Ya esta, con esto podemos construir una clase.
+   
+   ```java
+    
     public class Persona() {
         //ATRIBUTOS
       private double peso;
       private double altura;
       private String etnia;
         //METODOS
-      public void comer() {}
-      public void dormir() {}
-      public void andar() {}
+      public static void comer() {}
+      public static void dormir() {}
+      public static void andar() {}
       }
       ```
        
