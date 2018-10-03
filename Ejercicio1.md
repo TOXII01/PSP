@@ -22,16 +22,17 @@
     Estos comportamientos es lo que en Java se llamarían métodos.  
     Ya esta, con esto podemos construir una clase.  
     
-    ```java  
-    public class Persona() {  
-        //ATRIBUTOS  
-      private double peso;  
-      private double altura;  
-      private String etnia;  
-        //METODOS   
-      public void comer() {}  
-      public void dormir() {}  
-      public void andar() {}  
+    ```java
+    public class Persona() {
+        //ATRIBUTOS
+      private double peso;
+      private double altura;
+      private String etnia;
+        //METODOS
+      public void comer() {}
+      public void dormir() {}
+      public void andar() {}
+      }
       ```
        
   - Objeto
