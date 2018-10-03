@@ -44,6 +44,10 @@
     public class Persona() {}
     //Y TENEMOS EL OBJETO
     Persona p = new Persona("12341234F","Toxii01",20);
+    //LOS METODOS SE PUEDEN INVOCAR ASÍ
+    p.comer();
+    p.dormir();
+    p.andar();
 ```
   
    Sobrecarga de métodos
