@@ -23,9 +23,9 @@
     
     public class Persona() {
         //ATRIBUTOS
-      private double peso;
-      private double altura;
-      private String etnia;
+      private String nombre;
+      private int edad;
+      private String dni;
         //METODOS
       public void comer() {}
       public void dormir() {}
@@ -36,7 +36,14 @@
    Objeto
    ------
   
-  Cuando hablamos de Objeto nos referimos a instancias de una clase, es decir, un objeto es una creación de un elemento que esta basado en la clase a la que hace referencia.
+  Cuando hablamos de Objeto nos referimos a la instancia de una clase, es decir, un objeto es  de un elemento que esta basado en la clase,que es una plantilla, a la que hace referencia. Los objetos tienen identidad, lo que les distingue de otros objetos de la misma clase(del mismo tipo), un comportamiento(los métodos que pueden hacer) y un estado(los atributos que tienen). 
+  Vamos con un ejemplo siguiendo el anterior :  
+```java
+    //TENEMOS LA CLASE 
+    public class Persona() {}
+    //Y TENEMOS EL OBJETO
+    Persona p = new Persona("Toxii01",20,"12341234F");
+```
   
    Sobrecarga de métodos
    ------
