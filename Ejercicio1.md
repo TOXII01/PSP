@@ -113,6 +113,64 @@
 ```
    Polimorfismo
    ------
+  El polimorfismo viene ligado con la herencia, al final se trata de implementar métodos desde la clase principal a las heredadas, para ello se necesita que la clase padre sea **abstracta** y tenga métodos **abstractos** y las clases hijas lo implementen acorde a sus especificaciones.Es una manera de jerarquizar un patrón de comportamiento a una serie de objetos de la misma clase. Y la clase padre no se puede instanciar, solo se pueden crear objetos de las clases derivadas/heredadas, también hay que tener en mente que los métodos abstractos que se creen en la clase principal deben implementarse **obligatoriamente** en las clases hijas.
+```java
+    //CLASE PRINCIPAL
+    public abstract class Persona {
+      public abstact void oficio();
+      public void come() {
+        System.out.println("Soy persona, por tanto si (Clase Principal)");
+      }
+     }
+     //CLASES HEREDADAS
+     public class Medico extends Persona {
+      private String dept;
+      public void oficio() {
+       System.out.println("Soy medico");
+      }
+      public void come() {
+        System.out.println("Tengo guardia, no puedo");
+      }
+     }
+     public class Estudiante extends Persona {
+      private String clase;
+      public void oficio() {
+        System.out.println("Ninguno, soy estudiante");
+      }
+      /*
+      Si omitimos este método ira a la clase padre.
+      public void come() {
+        System.out.println("Es la hora del patio, voy a comer");
+      }
+      */
+     }
+    //MAIN
+    public class Main {
+      public static void main(String[] args {
+        
+        ArrayList<Persona> listaPersonas = new ArrayList<>();
+        
+        listaPersonas.add(new Medico("6666666","Pepe",35,"Cirujano General");
+        listaPersonas.add(new Estudiante("333333","Galileo",18,"2DAM");
+        
+        
+        for(Persona p : listaPersonas) {
+          System.out.println("DNI : " + p.getDNI() + "\nNOMBRE : " + p.getNombre() + "\nCome : " + p.come() + "\nOficio : " + p.oficio());
+          /* Los resultados que saldrian :
+              Para el primero :
+                DNI:6666666
+                NOMBRE:Pepe
+                Come: Tengo guardia, no puedo
+                Oficio:Soy medico
+              Para el segundo : 
+                DNI:3333333
+                NOMBRE:Galileo
+                Come:Soy persona, por tanto si
+                Oficio:Ninguno, soy estudiante
+                
+```
+  
+   
    Interface
    ------
 
