@@ -84,6 +84,33 @@
    
    Herencia
    ------
+ La herencia se da cuando hay clases que derivan de otras básicamente, en Java extienden de clases superiores que las engloban, hereda los atributos y los métodos, y se pueden crear los propios de la clase, anteriormente hemos hablado de la encapsulación de datos, entre los tipos de visibilidad se encontraba el **Protected** que es que va a tomar la clase general que va a heredar, para que podamos hacer referencia a esa clase necesitamos que la clase heredada extienda a la clase general pero con un ejemplo lo veremos mejor.
+```java
+    //CLASE PRINCIPAL
+    public class Persona {
+      protected String DNI;
+      protected String nombre;
+      protected int edad;
+      
+      public void comer() {}
+      public void dormir() {}
+      public void andar() {}
+      }
+      
+      //CLASE HEREDADA
+      public class Alumno extends Persona { //INDICAMOS LA CLASE DE LA QUE TOMA REFERENCIA
+        private int NIA;
+        private String clase;
+        private ArrayList<int> notas;
+        
+        public Alumno() {
+        super(); //ESTO HACE QUE HEREDE LOS ATRIBUTOS DE PERSONA
+        }
+        public void hacerExamen() {}
+        public void estudiar() {}
+        public void irClase() {}
+     }
+```
    Polimorfismo
    ------
    Interface
