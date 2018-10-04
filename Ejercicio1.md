@@ -155,7 +155,8 @@
         
         
         for(Persona p : listaPersonas) {
-          System.out.println("DNI : " + p.getDNI() + "\nNOMBRE : " + p.getNombre() + "\nCome : " + p.come() + "\nOficio : " + p.oficio());
+          System.out.println("DNI : " + p.getDNI() + "\nNOMBRE : " + p.getNombre()  
+          + "\nCome : " + p.come() + "\nOficio : " + p.oficio());
           /* Los resultados que saldrian :
               Para el primero :
                 DNI:6666666
