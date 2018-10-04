@@ -156,7 +156,8 @@
         
         for(Persona p : listaPersonas) {
           System.out.println("DNI : " + p.getDNI() + "\nNOMBRE : " + p.getNombre()  
-          + "\nCome : " + p.come() + "\nOficio : " + p.oficio());
+          + "\nCome : " + p.come() + "\nOficio : " + p.oficio());  
+          
           /* Los resultados que saldrian :
               Para el primero :
                 DNI:6666666
@@ -170,10 +171,67 @@
                 Oficio:Ninguno, soy estudiante
                 
 ```
-  
+    
    
    Interface
    ------
-
-
-
+   Una interface es una clase totalmente abstracta que no se puede implementar de ninguna manera, solo contiene métodos abstractos de los que si se puede hacer instancia. Sirven para definir la forma que debe tomar una clase, en la interface no se pueden crer atributos a menos que sean estaticos o constantes finales. La palabra clave en interface es  **implements** que es como el **extends** en herencia, liga la interface con la clase.
+  
+```java
+      //INTERFACE
+      public interface accionPersona {
+      //SE PUEDE OMITIR "public abstract" ya que la interface por si misma es pública y abstracta.
+        public abstract void comer();
+        void dormir();
+        void andar();
+      }
+      //CLASE PRINCIPAL
+      public abstract class Persona implements accionPersona {
+        protected String DNI;
+        protected String nombre;
+        protected int edad;
+      
+        public Persona() {
+        }
+        public Persona(String DNI, String nombre, int edad) {
+         this.DNI = DNI;
+         this.nombre = nombre;
+         this.edad = edad;
+        }
+        //IMPLEMENTACION DE LOS MÉTODOS DE LA INTERFACE
+         public void dormir() {
+          System.out.println("Esta dormido");
+         }
+         public void comer() {
+          System.out.println("Esta comiendo");
+         }
+         public void andar() {
+          System.out.println("Esta andando");
+         }
+        }
+        //CLASE HIJA/HEREDADA
+        public Medico extends Persona {
+          private String dept;
+          //REDEFINIENDO EL METODO DE LA INTERFACE.
+           public void comer() {
+            System.out.println("No puedo (Clase Medico)");
+           }
+         }
+         //MAIN
+         public class Main {
+          public static void main(String[] args) {
+            Persona p = new Medico("66666666","Pepe",35,"Cirugia General");
+            p.comer();
+            p.andar();
+            p.dormir();
+            
+           }
+          }
+          /*
+          *La salida imprime :
+          * No puedo(Clase Medico)
+          * Esta andado
+          * Esta dormido
+          */
+        
+```
