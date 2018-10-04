@@ -84,7 +84,7 @@
    
    Herencia
    ------
- La herencia se da cuando hay clases que derivan de otras básicamente, en Java extienden de clases superiores que las engloban, hereda los atributos y los métodos, y se pueden crear los propios de la clase, anteriormente hemos hablado de la encapsulación de datos, entre los tipos de visibilidad se encontraba el **Protected** que es que va a tomar la clase general que va a heredar, para que podamos hacer referencia a esa clase necesitamos que la clase heredada extienda a la clase general pero con un ejemplo lo veremos mejor.
+ La herencia se da cuando hay clases que derivan de otras básicamente, en Java extienden de clases superiores que las engloban, hereda los atributos y los métodos, y se pueden crear los propios de la clase, anteriormente hemos hablado de la encapsulación de datos, entre los tipos de visibilidad se encontraba el **Protected** que es que va a tomar la clase general que va a heredar. Para que podamos hacer referencia a esa clase necesitamos que la clase heredada extienda a la clase general pero con un ejemplo lo veremos mejor.
 ```java
     //CLASE PRINCIPAL
     public class Persona {
