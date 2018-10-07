@@ -3,7 +3,7 @@ Ejercicio 2
 Introducir DNI, comprobar letra y devolver
 ------
 ```java
-package ejerQuiniela;
+
 import java.util.*;
 public class ejerDNI {
 	public static void compruebaNIF(String nif) {
