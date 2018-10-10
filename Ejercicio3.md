@@ -95,4 +95,4 @@ public class Directivo extends Empleado {
  
  ```
  **Salida**
-.. image:: .. ../Documents/salidaEjerHerencia.png
+
