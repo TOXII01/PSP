@@ -25,6 +25,11 @@ import javax.swing.JComboBox;
 import javax.swing.JScrollPane;
 
 public class Menu {
+	/* 
+	 * Creamos 2 Listas :
+	 * La primera corresponde con la lista de aeropuertos que hemos sacado de la URL 
+	 * La segunda corresponde con la lista de aeropuertos que se generarán con la busqueda que el usuario hará
+	 */
 	private static ArrayList<String> lista;
 	private static List<String> aeropuertos = new ArrayList<String>();
 	private JFrame frame;
@@ -37,7 +42,15 @@ public class Menu {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					/*
+					 * Llamamos al método de la clase Main para que coja la URL,
+					 * Y lo pase a un archivo .txt, este paso solo se hará una vez
+					 */
 					MainAeropuertos.guardaAeropuertos();
+					/*
+					 * Asignamos los aeropuertos del .txt a una lista de Strings
+					 * guardamos todos los datos de los aeropuertos, los 14 en forma de String
+					 */
 					lista = (ArrayList<String>)MainAeropuertos.guardaVectorAeropuertos();
 					Menu window = new Menu();
 					window.frame.setVisible(true);
@@ -61,6 +74,10 @@ public class Menu {
 	 * @throws IOException 
 	 */
 	private void initialize() throws IOException {
+		/*
+		 * En el frame autogenerado, hacemos un absolutLayout,
+		 * Creamos un Label, un TextField, un ComboBox y 2 botones
+		 */
 		frame = new JFrame();
 		frame.setBounds(200, 200, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -82,40 +99,64 @@ public class Menu {
 		JButton btnBuscar = new JButton("Buscar");
 		btnBuscar.setBounds(49, 95, 93, 35);
 		frame.getContentPane().add(btnBuscar);
+		/*
+		 * Cuando el botón se pulse recogemos el dato del TextField
+		 * Hacemos un bucle con la lista de aeropuertos 
+		 * Si lo contiene lo guardamos en el ComboBox para mostrarlo
+		 */
 		btnBuscar.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
+				//Cogemos el dato del TextField
 				String dato = txtDatos.getText().toString();
+				//Hacemos la busqueda respecto a la lista de aeropuertos
 				for (int i = 0; i < lista.size(); i++) {
 					if(lista.get(i).contains(dato)) {
 						aeropuertos.add(lista.get(i));
 					}
 				}
+				//Si no ha encontrado ninguno muestra mensaje de error
 				if(aeropuertos.isEmpty()) {
 					JOptionPane.showMessageDialog(null, "No se ha encontrado");
 				} else {
+					/*
+					 * Si ha encontrado aeropuertos,
+					 * primero se asegura de eliminar los datos del comboBox 
+					 * en caso de que se busquen varios aeropuertos 
+					 * tendremos que borrar los resultados anteriores
+					 */
 					comboBox.removeAllItems();		
 					for (int i = 0; i < aeropuertos.size(); i++) {
 						if(aeropuertos.get(i) != null) {
 							comboBox.addItem(aeropuertos.get(i));
 						}
 					}
+					/* Tambien tenemos que borrar la lista de aeropuertos 
+					 * Que correspondan con el dato introducido en el TextField
+					 * Para que no se añadan los valores de búsquedas anteriores
+					 */
 					aeropuertos.clear(); 	
-					System.out.println(comboBox.getSelectedItem().toString());
+					//System.out.println(comboBox.getSelectedItem().toString());
 					}
 				}
 
 			});
+		
+		 // Creamos el listener del Botón para acceder a GoogleMaps
 		btnURL.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				// TODO Auto-generated method stub
+				/*
+				* Cogemos la línea completa del aeropuerto 
+				* Cogemos los datos del array 6 y 7, corresponden a la altitud y la longitud
+				*/
 				String[] lugar = ((String) comboBox.getSelectedItem()).split(",");
 				String latitud = lugar[6];
 				String longitud = lugar[7];
-				
+				//Introducimos los la altitud y la longitud en la query e inicia el buscador
 				String URLBusqueda = "https://www.google.com/maps/search/?api=1&query=";
 				String URLCompleto = URLBusqueda + latitud + "," + longitud;
 					if(java.awt.Desktop.isDesktopSupported()) {
