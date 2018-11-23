@@ -53,6 +53,7 @@ public class BarraDeTareas extends JFrame {
 		contentPane.add(lblEligeUnaAplicacin);
 		
 		JButton btn1 = new JButton("");
+		/* Colocar la ruta de la imagen*/
 		btn1.setIcon(new ImageIcon("F:\\DAM2\\PSP\\Tema1\\img\\Spotify.png"));
 		btn1.setBounds(108, 90, 87, 74);
 		contentPane.add(btn1);
@@ -62,6 +63,7 @@ public class BarraDeTareas extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
 				try {
+					/* Ruta hasta nuestro .exe*/
 					ProcessBuilder uno = new ProcessBuilder("C:\\Users\\yunyang\\AppData\\Roaming\\Spotify\\Spotify.exe");
 							uno.start();
 				}catch(Exception ex) {
